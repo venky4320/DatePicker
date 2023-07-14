@@ -43,7 +43,14 @@ const DatePicker = () => {
     }
 
     const searchCity = (e) => {
-        let filteredCities= cities
+        let filteredCities= cities.filter(city => city.includes(selectedCity)).map(filterCity => {
+
+                return filterCity
+        }
+            
+        ) 
+            
+        
         setFilteredCities(filteredCities);
     }
     
